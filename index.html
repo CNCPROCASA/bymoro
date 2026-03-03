@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+  <title>Bymoro | Atelier de création & innovation durable</title>
+  <meta name="description" content="Bymoro est un atelier de création & innovation durable. Produits maison & décoration, jardin & extérieur, et solutions CNC pour professionnels. Fabriqué localement, pensé pour durer." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://bymoro.ma/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Bymoro | Atelier de création & innovation durable" />
+  <meta property="og:description" content="Produits maison & décoration, jardin & extérieur, et solutions CNC pour professionnels. Fabriqué localement, pensé pour durer." />
+  <meta property="og:url" content="https://bymoro.ma/" />
+  <meta property="og:image" content="https://bymoro.ma/og-bymoro.png" />
+  <meta property="og:image:alt" content="Bymoro — Atelier de création & innovation durable" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bymoro | Atelier de création & innovation durable" />
+  <meta name="twitter:description" content="Produits maison & décoration, jardin & extérieur, et solutions CNC pour professionnels." />
+  <meta name="twitter:image" content="https://bymoro.ma/og-bymoro.png" />
+
+  <style>
+    :root{
+      --bg:#f6f5f3;
+      --card:#ffffff;
+      --text:#171717;
+      --muted:#5a5a5a;
+      --line:#e9e7e2;
+      --brand:#c9a96a;
+      --brand2:#b8924a;
+      --dark:#151515;
+      --shadow: 0 16px 45px rgba(0,0,0,.10);
+      --shadow2: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 20px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:22px 16px 90px;}
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background: rgba(246,245,243,.88);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      max-width:1100px;margin:0 auto;
+      padding:10px 16px;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:1000;letter-spacing:.4px;}
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background: linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow: 0 10px 20px rgba(201,169,106,.35);
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,.05);
+      font-size:13px;color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .hero{
+      margin-top:16px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+      padding:22px;
+    }
+    .kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      background: rgba(201,169,106,.14);
+      color: #6a4d14;
+      font-weight:1000;font-size:12px;
+      width:fit-content;
+    }
+    h1{margin:12px 0 8px;font-size:40px;line-height:1.08;letter-spacing:-.6px}
+    .lead{margin:0;color:var(--muted);font-size:16.5px;max-width:72ch}
+    .values{
+      margin:14px 0 0;
+      display:grid;gap:8px;
+      color:#333;
+      font-weight:850;
+      font-size:14px;
+    }
+    .values span{display:flex;gap:10px;align-items:flex-start}
+    .dot{width:8px;height:8px;border-radius:999px;margin-top:7px;background:var(--brand);flex:0 0 auto}
+
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .tile{
+      display:block;
+      background: linear-gradient(135deg,#ffffff,#faf8f2);
+      border:1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow2);
+      padding:18px;
+      text-decoration:none;
+      transition: transform .2s ease, box-shadow .2s ease;
+      min-height: 170px;
+    }
+    .tile:hover{transform:translateY(-2px);box-shadow: var(--shadow);}
+    .tile .t{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      font-weight:1000;font-size:18px;letter-spacing:-.2px;
+    }
+    .badge{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:7px 10px;border-radius:999px;
+      background: rgba(0,0,0,.06);
+      border:1px solid rgba(0,0,0,.10);
+      font-weight:1000;font-size:12px;color:#2a2a2a;
+      white-space:nowrap;
+    }
+    .tile p{margin:10px 0 0;color:var(--muted);font-size:14.5px}
+    .cta{
+      margin-top:18px;
+      background: linear-gradient(135deg,#141414,#2a2a2a);
+      color:#fff;border-radius: 24px;
+      padding:18px 16px;
+      box-shadow: var(--shadow);
+      border:1px solid rgba(255,255,255,.10);
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      flex-wrap:wrap;
+    }
+    .cta strong{font-size:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff;
+      font-weight:1000;cursor:pointer;text-decoration:none;
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12.5px;
+      text-align:center;
+    }
+
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:34px}
+      .pill{display:none}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Bymoro",
+    "url":"https://bymoro.ma/",
+    "description":"Atelier de création & innovation durable. Produits maison & décoration, jardin & extérieur, et solutions CNC pour professionnels.",
+    "areaServed":"MA",
+    "sameAs":[]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px;font-weight:1000;">bymoro</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:800;">Atelier de création & innovation durable</div>
+        </div>
+      </div>
+      <div class="pill">🇲🇦 Fabriqué localement • Pensé pour durer</div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="kicker">Artisanat × Technologie • Fabrication CNC</div>
+      <h1>Atelier de création & innovation durable</h1>
+
+      <p class="lead">
+        Nous développons des produits à la croisée de l’artisanat et de la technologie.
+        À travers la fabrication CNC et le travail des matériaux naturels, nous concevons des objets pratiques pour la maison et le jardin.
+      </p>
+
+      <div class="values" aria-label="Valeurs Bymoro">
+        <span><i class="dot"></i>La fonctionnalité avant l’effet</span>
+        <span><i class="dot"></i>La qualité avant la quantité</span>
+        <span><i class="dot"></i>L’innovation utile avant la tendance</span>
+      </div>
+
+      <div class="grid" aria-label="Accès aux boutiques">
+        <a class="tile" href="/maison/">
+          <div class="t">
+            <span>Maison & décoration</span>
+            <span class="badge">Boutique</span>
+          </div>
+          <p>Objets utiles, kits, paravents, décoration sobre et durable — fabriqués localement.</p>
+        </a>
+
+        <a class="tile" href="/jardin/">
+          <div class="t">
+            <span>Jardin & extérieur</span>
+            <span class="badge">Boutique</span>
+          </div>
+          <p>Solutions pratiques pour le jardin : organisation, culture, protections, accessoires.</p>
+        </a>
+
+        <a class="tile" href="/pro/">
+          <div class="t">
+            <span>Professionnels CNC</span>
+            <span class="badge">B2B</span>
+          </div>
+          <p>Découpe, séries, aménagement, signalétique, prototypage — pour pros & entreprises.</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div>
+        <strong>Une demande rapide ?</strong>
+        <div style="opacity:.85;font-size:13.5px;margin-top:4px">Contact & devis sur WhatsApp / téléphone.</div>
+      </div>
+      <a class="btn" href="tel:+212680880994">📞 +212 680 880 994</a>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Bymoro — Casablanca, Maroc.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
