@@ -3,33 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Bymoro | Jardin & extérieur</title>
-  <meta name="description" content="Boutique Bymoro — Jardin & extérieur : solutions simples, utiles et durables pour le jardin." />
+
+  <title>Produits jardin & extérieur | Bymoro</title>
+  <meta name="description" content="Bymoro — Jardin & extérieur : solutions simples, utiles et durables pour la culture, l’organisation, la protection des plantes et l’aménagement extérieur." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://bymoro.ma/jardin/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Bymoro | Jardin & extérieur" />
+  <meta property="og:description" content="Solutions simples, utiles et durables pour le jardin : culture, organisation, protections et aménagement extérieur." />
+  <meta property="og:url" content="https://bymoro.ma/jardin/" />
+  <meta property="og:image" content="https://bymoro.ma/images/home-jardin.jpg" />
+  <meta property="og:image:alt" content="Produits jardin et extérieur Bymoro" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bymoro | Jardin & extérieur" />
+  <meta name="twitter:description" content="Solutions simples, utiles et durables pour le jardin." />
+  <meta name="twitter:image" content="https://bymoro.ma/images/home-jardin.jpg" />
+
   <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f6f5f3;color:#171717;line-height:1.6}
-    .wrap{max-width:900px;margin:0 auto;padding:22px 16px}
-    .card{background:#fff;border:1px solid #e9e7e2;border-radius:18px;padding:18px}
+    :root{
+      --bg:#f6f5f3;
+      --card:#ffffff;
+      --text:#171717;
+      --muted:#666666;
+      --line:#e9e7e2;
+      --brand:#c9a96a;
+      --brand2:#b8924a;
+      --dark:#151515;
+      --wa:#1f9d55;
+      --wa2:#178247;
+      --shadow:0 16px 45px rgba(0,0,0,.10);
+      --shadow2:0 10px 30px rgba(0,0,0,.08);
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
     a{color:inherit}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;border:1px solid #e9e7e2;background:#fff;text-decoration:none;font-weight:900}
-    .btn.primary{background:#151515;color:#fff;border-color:transparent}
-    .muted{color:#666}
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:22px 16px 110px;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(246,245,243,.88);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:10px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:1000;
+      letter-spacing:.4px;
+    }
+
+    .logo{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow:0 10px 20px rgba(201,169,106,.35);
+      flex:0 0 auto;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.05);
+      font-size:13px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .navline{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      text-decoration:none;
+      font-weight:900;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .btn.primary{
+      background:#151515;
+      color:#fff;
+      border-color:transparent;
+    }
+
+    .btn.whatsapp{
+      background:linear-gradient(135deg,var(--wa),var(--wa2));
+      color:#fff;
+      border-color:transparent;
+    }
+
+    .hero{
+      margin-top:16px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+    }
+
+    .hero img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .hero-content{
+      padding:20px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(201,169,106,.14);
+      color:#6a4d14;
+      font-weight:1000;
+      font-size:12px;
+      width:fit-content;
+    }
+
+    h1{
+      margin:12px 0 8px;
+      font-size:38px;
+      line-height:1.08;
+      letter-spacing:-.5px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    .lead{
+      font-size:16px;
+      margin:0;
+      max-width:70ch;
+    }
+
+    .grid{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:var(--shadow2);
+    }
+
+    .card h2{
+      margin:0 0 8px;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+
+    .list{
+      margin-top:10px;
+      display:grid;
+      gap:8px;
+      color:#333;
+      font-weight:800;
+      font-size:14px;
+    }
+
+    .list span{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      margin-top:7px;
+      background:var(--brand);
+      flex:0 0 auto;
+    }
+
+    .cta{
+      margin-top:22px;
+      background:linear-gradient(135deg,#141414,#2a2a2a);
+      color:#fff;
+      border-radius:24px;
+      padding:18px 16px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.10);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .cta strong{
+      font-size:18px;
+    }
+
+    .sticky-wa{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:80;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 16px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--wa),var(--wa2));
+      color:#fff;
+      text-decoration:none;
+      font-weight:1000;
+      box-shadow:0 16px 34px rgba(31,157,85,.30);
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12.5px;
+      text-align:center;
+    }
+
+    @media (max-width: 980px){
+      .pill{display:none}
+      h1{font-size:32px}
+      .hero img{height:240px}
+    }
+
+    @media (max-width: 520px){
+      .wrap{padding:18px 12px 110px}
+      h1{font-size:28px}
+      .btn{width:100%}
+      .sticky-wa{
+        left:12px;
+        right:12px;
+        bottom:12px;
+        border-radius:16px;
+      }
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Bymoro Jardin & extérieur",
+    "url":"https://bymoro.ma/jardin/",
+    "description":"Solutions simples, utiles et durables pour la culture, l’organisation, la protection des plantes et l’aménagement extérieur."
+  }
+  </script>
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px;font-weight:1000;">bymoro</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:800;">Atelier de création & innovation durable</div>
+        </div>
+      </div>
+      <div class="pill">🌿 Jardin pratique • Solutions durables</div>
+    </div>
+  </div>
+
   <main class="wrap">
-    <a class="btn" href="/">← Retour accueil</a>
+    <div class="navline">
+      <a class="btn" href="/">← Accueil</a>
+      <a class="btn" href="/maison/">Maison & décoration</a>
+    </div>
 
-    <h1>Jardin & extérieur</h1>
-    <p class="muted">Page vitrine/boutique pour tes produits jardin. On ajoutera les premiers produits dès que tu valides la liste.</p>
+    <section class="hero">
+      <img src="/images/home-jardin.jpg" alt="Produits jardin et extérieur Bymoro" />
+      <div class="hero-content">
+        <div class="kicker">Jardin • Culture • Organisation • Extérieur</div>
+        <h1>Jardin & extérieur</h1>
+        <p class="lead muted">
+          Solutions simples et durables pour le jardin : culture, organisation, protection des plantes et aménagement extérieur.
+          Produits conçus par Bymoro pour améliorer le jardin au quotidien.
+        </p>
+      </div>
+    </section>
 
-    <div class="card">
-      <strong>Prochainement</strong>
-      <div class="muted" style="margin-top:6px">Accessoires de culture, organisation, protections, solutions anti-oiseaux, etc.</div>
-      <div style="margin-top:10px">
-        <a class="btn primary" href="tel:+212680880994">📞 Demander</a>
+    <div class="grid">
+      <div class="card">
+        <h2>Produits en préparation</h2>
+
+        <div class="list">
+          <span><i class="dot"></i>Protection anti-oiseaux</span>
+          <span><i class="dot"></i>Solutions pour carré potager</span>
+          <span><i class="dot"></i>Supports et organisation du jardin</span>
+          <span><i class="dot"></i>Kits de culture</span>
+          <span><i class="dot"></i>Accessoires extérieurs pratiques</span>
+        </div>
+
+        <div style="margin-top:14px">
+          <a class="btn whatsapp" href="https://wa.me/212680880994" target="_blank" rel="noopener noreferrer">💬 Demander sur WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Esprit Bymoro</h2>
+        <p class="muted">
+          Nous développons des produits pensés pour des jardins simples, fonctionnels et durables.
+          Fabrication locale, amélioration continue, solutions utiles avant tout.
+        </p>
       </div>
     </div>
+
+    <div class="cta">
+      <div>
+        <strong>Un besoin spécifique pour ton jardin ?</strong>
+        <div style="opacity:.85;font-size:13.5px;margin-top:4px">Dis-nous ce que tu cherches, on te répond rapidement.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn whatsapp" href="https://wa.me/212680880994" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        <a class="btn primary" href="tel:+212680880994">📞 Appeler</a>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Bymoro — Casablanca, Maroc.
+    </footer>
   </main>
+
+  <a class="sticky-wa" href="https://wa.me/212680880994" target="_blank" rel="noopener noreferrer">
+    💬 WhatsApp
+  </a>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
