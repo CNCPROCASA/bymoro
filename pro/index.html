@@ -3,40 +3,424 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Bymoro | Solutions CNC pour professionnels</title>
-  <meta name="description" content="Bymoro — services et solutions CNC pour professionnels : découpe, séries, aménagement, prototypage, signalétique." />
+
+  <title>Solutions CNC pour professionnels | Bymoro</title>
+  <meta name="description" content="Bymoro — solutions CNC pour professionnels : découpe, petites et moyennes séries, prototypage, aménagement, habillage et signalétique sur mesure." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://bymoro.ma/pro/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Bymoro | Solutions CNC pour professionnels" />
+  <meta property="og:description" content="Découpe CNC, petites et moyennes séries, prototypage, habillage, signalétique et solutions sur mesure pour professionnels." />
+  <meta property="og:url" content="https://bymoro.ma/pro/" />
+  <meta property="og:image" content="https://bymoro.ma/images/home-pro.jpg" />
+  <meta property="og:image:alt" content="Solutions CNC Bymoro pour professionnels" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bymoro | Solutions CNC pour professionnels" />
+  <meta name="twitter:description" content="Découpe CNC, séries, prototypage, habillage et signalétique sur mesure." />
+  <meta name="twitter:image" content="https://bymoro.ma/images/home-pro.jpg" />
+
   <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f6f5f3;color:#171717;line-height:1.6}
-    .wrap{max-width:900px;margin:0 auto;padding:22px 16px}
-    .card{background:#fff;border:1px solid #e9e7e2;border-radius:18px;padding:18px}
+    :root{
+      --bg:#f6f5f3;
+      --card:#ffffff;
+      --text:#171717;
+      --muted:#666666;
+      --line:#e9e7e2;
+      --brand:#c9a96a;
+      --brand2:#b8924a;
+      --dark:#151515;
+      --wa:#1f9d55;
+      --wa2:#178247;
+      --shadow:0 16px 45px rgba(0,0,0,.10);
+      --shadow2:0 10px 30px rgba(0,0,0,.08);
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      background:#f6f5f3;
+      color:var(--text);
+      line-height:1.6;
+    }
+
     a{color:inherit}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;border:1px solid #e9e7e2;background:#fff;text-decoration:none;font-weight:900}
-    .btn.primary{background:#151515;color:#fff;border-color:transparent}
-    .muted{color:#666}
-    ul{margin:10px 0 0;padding-left:18px}
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:22px 16px 110px;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(246,245,243,.88);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:10px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:1000;
+      letter-spacing:.4px;
+    }
+
+    .logo{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow:0 10px 20px rgba(201,169,106,.35);
+      flex:0 0 auto;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.05);
+      font-size:13px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .navline{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      text-decoration:none;
+      font-weight:900;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .btn.primary{
+      background:#151515;
+      color:#fff;
+      border-color:transparent;
+    }
+
+    .btn.whatsapp{
+      background:linear-gradient(135deg,var(--wa),var(--wa2));
+      color:#fff;
+      border-color:transparent;
+    }
+
+    .hero{
+      margin-top:16px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+    }
+
+    .hero img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .hero-content{
+      padding:20px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(201,169,106,.14);
+      color:#6a4d14;
+      font-weight:1000;
+      font-size:12px;
+      width:fit-content;
+    }
+
+    h1{
+      margin:12px 0 8px;
+      font-size:38px;
+      line-height:1.08;
+      letter-spacing:-.5px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    .lead{
+      font-size:16px;
+      margin:0;
+      max-width:72ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:var(--shadow2);
+    }
+
+    .card h2{
+      margin:0 0 8px;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+
+    .list{
+      margin-top:10px;
+      display:grid;
+      gap:8px;
+      color:#333;
+      font-weight:800;
+      font-size:14px;
+    }
+
+    .list span{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      margin-top:7px;
+      background:var(--brand);
+      flex:0 0 auto;
+    }
+
+    .cta{
+      margin-top:22px;
+      background:linear-gradient(135deg,#141414,#2a2a2a);
+      color:#fff;
+      border-radius:24px;
+      padding:18px 16px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.10);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .cta strong{
+      font-size:18px;
+    }
+
+    .sticky-wa{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:80;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 16px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--wa),var(--wa2));
+      color:#fff;
+      text-decoration:none;
+      font-weight:1000;
+      box-shadow:0 16px 34px rgba(31,157,85,.30);
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12.5px;
+      text-align:center;
+    }
+
+    @media (max-width: 980px){
+      .pill{display:none}
+      h1{font-size:32px}
+      .hero img{height:240px}
+      .grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width: 520px){
+      .wrap{padding:18px 12px 110px}
+      h1{font-size:28px}
+      .btn{width:100%}
+      .sticky-wa{
+        left:12px;
+        right:12px;
+        bottom:12px;
+        border-radius:16px;
+      }
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Solutions CNC pour professionnels",
+    "provider":{
+      "@type":"Organization",
+      "name":"Bymoro",
+      "url":"https://bymoro.ma/"
+    },
+    "areaServed":"Maroc",
+    "url":"https://bymoro.ma/pro/",
+    "description":"Découpe CNC, petites et moyennes séries, prototypage, habillage, signalétique et solutions sur mesure pour professionnels."
+  }
+  </script>
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px;font-weight:1000;">bymoro</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:800;">Atelier de création & innovation durable</div>
+        </div>
+      </div>
+      <div class="pill">⚙️ B2B • CNC • Fabrication sur mesure</div>
+    </div>
+  </div>
+
   <main class="wrap">
-    <a class="btn" href="/">← Retour accueil</a>
+    <div class="navline">
+      <a class="btn" href="/">← Accueil</a>
+      <a class="btn" href="/maison/">Maison & décoration</a>
+      <a class="btn" href="/jardin/">Jardin & extérieur</a>
+    </div>
 
-    <h1>Professionnels CNC</h1>
-    <p class="muted">Offre B2B : fabrication, découpe, séries et solutions sur mesure.</p>
+    <section class="hero">
+      <img src="/images/home-pro.jpg" alt="Solutions CNC Bymoro pour professionnels" />
+      <div class="hero-content">
+        <div class="kicker">Découpe CNC • Prototypage • Séries • B2B</div>
+        <h1>Professionnels CNC</h1>
+        <p class="lead muted">
+          Bymoro accompagne les professionnels avec des solutions CNC sur mesure : découpe, petites et moyennes séries,
+          prototypage, habillage, signalétique et optimisation fabrication.
+        </p>
+      </div>
+    </section>
 
-    <div class="card">
-      <strong>Prestations</strong>
-      <ul>
-        <li>Découpe CNC (MDF, CP, bois, panneaux)</li>
-        <li>Séries petites/moyennes</li>
-        <li>Prototypage & optimisation fabrication</li>
-        <li>Aménagement, habillage, signalétique</li>
-      </ul>
+    <div class="grid">
+      <div class="card">
+        <h2>Prestations</h2>
+        <div class="list">
+          <span><i class="dot"></i>Découpe CNC (MDF, contreplaqué, bois, panneaux)</span>
+          <span><i class="dot"></i>Petites et moyennes séries</span>
+          <span><i class="dot"></i>Prototypage & mise au point fabrication</span>
+          <span><i class="dot"></i>Aménagement, habillage, panneaux décoratifs</span>
+          <span><i class="dot"></i>Signalétique et éléments sur mesure</span>
+        </div>
+      </div>
 
-      <div style="margin-top:12px">
-        <a class="btn primary" href="tel:+212680880994">📞 Demander un devis</a>
+      <div class="card">
+        <h2>Pour qui ?</h2>
+        <div class="list">
+          <span><i class="dot"></i>Architectes & décorateurs</span>
+          <span><i class="dot"></i>Menuisiers & fabricants</span>
+          <span><i class="dot"></i>Agences d’aménagement</span>
+          <span><i class="dot"></i>Commerces & enseignes</span>
+          <span><i class="dot"></i>Entreprises ayant besoin de pièces sur mesure</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Approche Bymoro</h2>
+        <p class="muted">
+          Nous privilégions la clarté, la faisabilité et l’optimisation. L’objectif n’est pas seulement de découper,
+          mais de proposer une solution de fabrication fiable, propre et adaptée à votre besoin réel.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Demande de devis</h2>
+        <p class="muted">
+          Envoyez vos dimensions, quantités, matière souhaitée, visuels ou croquis. Nous vous répondons rapidement
+          avec une orientation claire sur la faisabilité et le devis.
+        </p>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn whatsapp" href="https://wa.me/212680880994" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+          <a class="btn primary" href="tel:+212680880994">📞 Demander un devis</a>
+        </div>
       </div>
     </div>
+
+    <div class="cta">
+      <div>
+        <strong>Un projet CNC à chiffrer ?</strong>
+        <div style="opacity:.85;font-size:13.5px;margin-top:4px">Envoyez votre besoin et recevez un premier retour rapidement.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn whatsapp" href="https://wa.me/212680880994" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        <a class="btn primary" href="tel:+212680880994">📞 Appeler</a>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Bymoro — Casablanca, Maroc.
+    </footer>
   </main>
+
+  <a class="sticky-wa" href="https://wa.me/212680880994" target="_blank" rel="noopener noreferrer">
+    💬 WhatsApp
+  </a>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
