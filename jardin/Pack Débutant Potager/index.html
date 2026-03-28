@@ -1,1 +1,184 @@
+<style>
+:root {
+  --green: #6f8f72;
+  --light-green: #a8c3a2;
+  --beige: #f5f1e8;
+  --brown: #7a5c3e;
+  --text: #2b2b2b;
+}
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.free {
+  color: var(--brown);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: block;
+  background: var(--green);
+  color: white;
+  padding: 14px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* AVANTAGES */
+.advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.adv {
+  background: var(--beige);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* LIST */
+ul {
+  padding-left: 18px;
+}
+
+/* CTA FINAL */
+.cta {
+  background: var(--beige);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta strong {
+  display: block;
+  margin-bottom: 10px;
+}
+</style>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Pack Débutant Potager</h1>
+    <p>Tout pour démarrer facilement son potager à la maison</p>
+
+    <img src="https://via.placeholder.com/600x400" alt="kit potager débutant Maroc">
+
+    <div class="price">99 DH</div>
+    <div class="free">Livraison gratuite</div>
+
+    <a class="btn" href="https://wa.me/212680880994">
+      Commander sur WhatsApp
+    </a>
+  </div>
+
+  <!-- AVANTAGES -->
+  <div class="section">
+    <h2>Pourquoi ce pack ?</h2>
+    <div class="advantages">
+      <div class="adv">🌱 Facile à utiliser</div>
+      <div class="adv">👨‍🌾 Idéal pour débutants</div>
+      <div class="adv">☀️ Adapté au climat local</div>
+      <div class="adv">🚚 Livraison gratuite</div>
+    </div>
+  </div>
+
+  <!-- CONTENU -->
+  <div class="section">
+    <h2>Contenu du pack</h2>
+    <ul>
+      <li>Laitue</li>
+      <li>Radis</li>
+      <li>Persil</li>
+      <li>Basilic</li>
+      <li>Tomate cerise</li>
+      <li>Poivron</li>
+      <li>2 plateaux de semis</li>
+      <li>1 sachet de substrat prêt à l’emploi</li>
+      <li>1 guide simple</li>
+    </ul>
+  </div>
+
+  <!-- CIBLE -->
+  <div class="section">
+    <h2>Pour qui ?</h2>
+    <p>
+      Ce pack est parfait pour :
+      débutants, familles, balcons et terrasses,
+      ou toute personne qui veut commencer simplement un potager chez soi.
+    </p>
+  </div>
+
+  <!-- COMMENT -->
+  <div class="section">
+    <h2>Comment ça marche ?</h2>
+    <ol>
+      <li>Remplir les plateaux avec le substrat</li>
+      <li>Semer et arroser légèrement</li>
+      <li>Observer la germination et repiquer les plants</li>
+    </ol>
+  </div>
+
+  <!-- REASSURANCE -->
+  <div class="section">
+    <p>
+      Aucun besoin d’expérience.  
+      Le pack est pensé pour vous aider à commencer facilement,
+      étape par étape, sans se compliquer.
+    </p>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta">
+    <strong>Commande rapide sur WhatsApp</strong>
+    <a class="btn" href="https://wa.me/212680880994">
+      Commander maintenant
+    </a>
+    <p>+212680880994</p>
+  </div>
+
+</div>
