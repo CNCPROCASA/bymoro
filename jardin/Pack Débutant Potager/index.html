@@ -1,184 +1,574 @@
-<style>
-:root {
-  --green: #6f8f72;
-  --light-green: #a8c3a2;
-  --beige: #f5f1e8;
-  --brown: #7a5c3e;
-  --text: #2b2b2b;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  background: #fff;
-}
+  <title>Pack Débutant Potager | Kit semis Maroc | Bymoro</title>
+  <meta
+    name="description"
+    content="Pack Débutant Potager Bymoro à 99 DH avec livraison gratuite. Kit simple pour commencer un potager maison à Casablanca, sur balcon ou terrasse."
+  />
+  <meta
+    name="keywords"
+    content="pack potager débutant, kit semis Maroc, potager maison Casablanca, semis balcon terrasse, jardinage débutant Maroc"
+  />
 
-.container {
-  padding: 20px;
-  max-width: 600px;
-  margin: auto;
-}
+  <style>
+    :root {
+      --bg: #f8f4ec;
+      --bg-soft: #f2eadc;
+      --text: #2f2a24;
+      --muted: #6b6257;
+      --green: #5f7d57;
+      --green-dark: #496345;
+      --beige: #e9dcc7;
+      --brown: #8a6a47;
+      --white: #ffffff;
+      --border: #e6dccd;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      --radius: 16px;
+    }
 
-/* HERO */
-.hero {
-  text-align: center;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.hero img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 15px 0;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.price {
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--green);
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.free {
-  color: var(--brown);
-  font-size: 14px;
-  margin-bottom: 10px;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.btn {
-  display: block;
-  background: var(--green);
-  color: white;
-  padding: 14px;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-}
+    a {
+      color: inherit;
+    }
 
-/* SECTIONS */
-.section {
-  margin-top: 30px;
-}
+    .potager-page {
+      width: 100%;
+    }
 
-.section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+    .potager-container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-/* AVANTAGES */
-.advantages {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
+    .potager-section {
+      padding: 28px 0;
+    }
 
-.adv {
-  background: var(--beige);
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 14px;
-}
+    .potager-badge {
+      display: inline-block;
+      background: var(--beige);
+      color: var(--brown);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
 
-/* LIST */
-ul {
-  padding-left: 18px;
-}
+    .potager-title {
+      font-size: 30px;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      color: var(--text);
+    }
 
-/* CTA FINAL */
-.cta {
-  background: var(--beige);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin-top: 40px;
-}
+    .potager-subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
 
-.cta strong {
-  display: block;
-  margin-bottom: 10px;
-}
-</style>
+    .potager-hero {
+      padding-top: 24px;
+    }
 
-<div class="container">
+    .potager-hero-grid {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+    }
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Pack Débutant Potager</h1>
-    <p>Tout pour démarrer facilement son potager à la maison</p>
+    .potager-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
 
-    <img src="https://via.placeholder.com/600x400" alt="kit potager débutant Maroc">
+    .potager-card-body {
+      padding: 22px;
+    }
 
-    <div class="price">99 DH</div>
-    <div class="free">Livraison gratuite</div>
+    .potager-price-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 16px 0 10px;
+    }
 
-    <a class="btn" href="https://wa.me/212680880994">
-      Commander sur WhatsApp
-    </a>
-  </div>
+    .potager-price {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--green-dark);
+    }
 
-  <!-- AVANTAGES -->
-  <div class="section">
-    <h2>Pourquoi ce pack ?</h2>
-    <div class="advantages">
-      <div class="adv">🌱 Facile à utiliser</div>
-      <div class="adv">👨‍🌾 Idéal pour débutants</div>
-      <div class="adv">☀️ Adapté au climat local</div>
-      <div class="adv">🚚 Livraison gratuite</div>
-    </div>
-  </div>
+    .potager-free {
+      display: inline-block;
+      background: #edf5ea;
+      color: var(--green-dark);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-  <!-- CONTENU -->
-  <div class="section">
-    <h2>Contenu du pack</h2>
-    <ul>
-      <li>Laitue</li>
-      <li>Radis</li>
-      <li>Persil</li>
-      <li>Basilic</li>
-      <li>Tomate cerise</li>
-      <li>Poivron</li>
-      <li>2 plateaux de semis</li>
-      <li>1 sachet de substrat prêt à l’emploi</li>
-      <li>1 guide simple</li>
-    </ul>
-  </div>
+    .potager-note {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 10px 0 20px;
+    }
 
-  <!-- CIBLE -->
-  <div class="section">
-    <h2>Pour qui ?</h2>
-    <p>
-      Ce pack est parfait pour :
-      débutants, familles, balcons et terrasses,
-      ou toute personne qui veut commencer simplement un potager chez soi.
-    </p>
-  </div>
+    .potager-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 14px 18px;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: background 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
 
-  <!-- COMMENT -->
-  <div class="section">
-    <h2>Comment ça marche ?</h2>
-    <ol>
-      <li>Remplir les plateaux avec le substrat</li>
-      <li>Semer et arroser légèrement</li>
-      <li>Observer la germination et repiquer les plants</li>
-    </ol>
-  </div>
+    .potager-btn:hover {
+      background: var(--green-dark);
+    }
 
-  <!-- REASSURANCE -->
-  <div class="section">
-    <p>
-      Aucun besoin d’expérience.  
-      Le pack est pensé pour vous aider à commencer facilement,
-      étape par étape, sans se compliquer.
-    </p>
-  </div>
+    .potager-hero-image {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      object-fit: cover;
+    }
 
-  <!-- CTA FINAL -->
-  <div class="cta">
-    <strong>Commande rapide sur WhatsApp</strong>
-    <a class="btn" href="https://wa.me/212680880994?text=Bonjour,%20je%20veux%20commander%20le%20Pack%20Débutant%20Potager%20à%2099DH">
-      Commander maintenant
-    </a>
-    <p>+212680880994</p>
-  </div>
+    .potager-section-head {
+      text-align: center;
+      margin-bottom: 18px;
+    }
 
-</div>
+    .potager-section-head h2 {
+      font-size: 26px;
+      margin: 0 0 8px;
+    }
+
+    .potager-section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .potager-advantages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .potager-adv {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 14px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .potager-adv-icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .potager-adv-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .potager-content-grid,
+    .potager-audience-grid,
+    .potager-reassurance-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .potager-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .potager-list li {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .potager-image-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .potager-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .potager-text-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .potager-text-card h2,
+    .potager-text-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .potager-text-card p:last-child,
+    .potager-text-card ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .potager-steps-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .potager-steps-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .potager-reassurance {
+      background: linear-gradient(180deg, #f6efe4 0%, #efe5d4 100%);
+      border: 1px solid #e5d8c1;
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+    }
+
+    .potager-reassurance strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--green-dark);
+    }
+
+    .potager-cta {
+      padding-bottom: 40px;
+    }
+
+    .potager-cta-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .potager-cta-box h2 {
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
+
+    .potager-cta-box p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .potager-phone {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--green-dark);
+      margin: 8px 0 18px;
+    }
+
+    .potager-seo-text {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .potager-section {
+        padding: 42px 0;
+      }
+
+      .potager-title {
+        font-size: 44px;
+      }
+
+      .potager-subtitle {
+        font-size: 19px;
+      }
+
+      .potager-hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .potager-advantages {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .potager-content-grid,
+      .potager-audience-grid,
+      .potager-reassurance-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .potager-card-body,
+      .potager-text-card,
+      .potager-cta-box,
+      .potager-reassurance {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="potager-page">
+
+    <!-- HERO -->
+    <section class="potager-section potager-hero">
+      <div class="potager-container">
+        <div class="potager-hero-grid">
+          <div class="potager-card">
+            <div class="potager-card-body">
+              <span class="potager-badge">Jardin • Débutant • Maison</span>
+              <h1 class="potager-title">Pack Débutant Potager</h1>
+              <p class="potager-subtitle">Tout pour démarrer facilement son potager à la maison</p>
+
+              <div class="potager-price-row">
+                <div class="potager-price">99 DH</div>
+                <div class="potager-free">Livraison gratuite</div>
+              </div>
+
+              <p class="potager-note">
+                Un pack simple pour commencer sur balcon, terrasse ou petit espace,
+                sans expérience préalable.
+              </p>
+
+              <a
+                class="potager-btn"
+                href="https://wa.me/212680880994?text=Bonjour,%20je%20veux%20commander%20le%20Pack%20Débutant%20Potager%20à%2099DH"
+                target="_blank"
+                rel="noopener"
+              >
+                Commander sur WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="potager-image-box">
+            <img
+              src="images/pack-potager-hero.jpg"
+              alt="Pack potager débutant avec graines, plateaux de semis et substrat"
+              class="potager-hero-image"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVANTAGES -->
+    <section class="potager-section">
+      <div class="potager-container">
+        <div class="potager-section-head">
+          <h2>Pourquoi choisir ce pack</h2>
+          <p>Un kit simple, clair et pensé pour bien commencer.</p>
+        </div>
+
+        <div class="potager-advantages">
+          <div class="potager-adv">
+            <div class="potager-adv-icon">🌱</div>
+            <div class="potager-adv-title">Facile à utiliser</div>
+          </div>
+          <div class="potager-adv">
+            <div class="potager-adv-icon">👌</div>
+            <div class="potager-adv-title">Idéal pour débutants</div>
+          </div>
+          <div class="potager-adv">
+            <div class="potager-adv-icon">☀️</div>
+            <div class="potager-adv-title">Adapté au climat local</div>
+          </div>
+          <div class="potager-adv">
+            <div class="potager-adv-icon">🚚</div>
+            <div class="potager-adv-title">Livraison gratuite</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENU DU PACK -->
+    <section class="potager-section">
+      <div class="potager-container">
+        <div class="potager-content-grid">
+          <div class="potager-image-box">
+            <img
+              src="images/pack-potager-contenu.jpg"
+              alt="Contenu du pack potager débutant avec graines, plateaux et substrat"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="potager-text-card">
+            <h2>Contenu du pack</h2>
+            <ul class="potager-list">
+              <li>Laitue</li>
+              <li>Radis</li>
+              <li>Persil</li>
+              <li>Basilic</li>
+              <li>Tomate</li>
+              <li>Poivron</li>
+              <li>2 plateaux de semis</li>
+              <li>1 sachet de substrat prêt à l’emploi</li>
+              <li>1 guide simple</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À QUI S’ADRESSE CE PACK -->
+    <section class="potager-section">
+      <div class="potager-container">
+        <div class="potager-audience-grid">
+          <div class="potager-text-card">
+            <h2>À qui s’adresse ce pack</h2>
+            <p>Ce pack est parfait pour :</p>
+            <ul class="potager-list">
+              <li>les débutants</li>
+              <li>les familles</li>
+              <li>les balcons et terrasses</li>
+              <li>les personnes qui veulent commencer simplement</li>
+            </ul>
+          </div>
+
+          <div class="potager-image-box">
+            <img
+              src="images/pack-potager-balcon-casablanca.jpg"
+              alt="Potager sur balcon à Casablanca avec plantation en cours"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section class="potager-section">
+      <div class="potager-container">
+        <div class="potager-section-head">
+          <h2>Comment ça marche</h2>
+          <p>Trois étapes simples pour commencer rapidement.</p>
+        </div>
+
+        <div class="potager-steps-wrap">
+          <img
+            src="images/pack-potager-etapes.jpg"
+            alt="Étapes pour faire ses semis : remplir, semer et arroser"
+            class="potager-steps-image"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉASSURANCE -->
+    <section class="potager-section">
+      <div class="potager-container">
+        <div class="potager-reassurance-grid">
+          <div class="potager-reassurance">
+            <strong>Aucun besoin d’expérience</strong>
+            <p>
+              Le pack est pensé pour aider à commencer facilement,
+              étape par étape, sans se compliquer.
+            </p>
+          </div>
+
+          <div class="potager-image-box">
+            <img
+              src="images/pack-potager-recolte-laitue-radis.jpg"
+              alt="Récolte de laitue et radis sur balcon potager débutant"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="potager-section potager-cta">
+      <div class="potager-container">
+        <div class="potager-cta-box">
+          <h2>Commande rapide sur WhatsApp</h2>
+          <p>Un message suffit pour commander votre pack.</p>
+
+          <div class="potager-phone">+212 680 880 994</div>
+
+          <a
+            class="potager-btn"
+            href="https://wa.me/212680880994?text=Bonjour,%20je%20veux%20commander%20le%20Pack%20Débutant%20Potager%20à%2099DH"
+            target="_blank"
+            rel="noopener"
+          >
+            Commander maintenant
+          </a>
+
+          <p class="potager-seo-text">
+            Pack potager débutant • kit semis Maroc • potager maison Casablanca •
+            semis balcon terrasse • jardinage débutant Maroc
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+</body>
+</html>
