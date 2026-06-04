@@ -1,27 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
-  <title id="title">ARTIBUILD PROJECT</title>
-  <desc id="desc">Logo Artibuild Project avec monogramme architectural bleu nuit et doré</desc>
-  <defs>
-    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#f1c979"/>
-      <stop offset="0.55" stop-color="#c6923e"/>
-      <stop offset="1" stop-color="#8c6429"/>
-    </linearGradient>
-    <linearGradient id="navy" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#071427"/>
-      <stop offset="1" stop-color="#0e2744"/>
-    </linearGradient>
-  </defs>
-  <rect width="720" height="220" rx="26" fill="#f7f2e8"/>
-  <g transform="translate(44 36)">
-    <rect x="0" y="0" width="148" height="148" rx="24" fill="url(#navy)"/>
-    <path d="M32 112V44h18v52h22V28h18v68h26V60h18v52z" fill="url(#gold)"/>
-    <path d="M28 123h92" stroke="#f1c979" stroke-width="6" stroke-linecap="round" opacity=".85"/>
-  </g>
-  <g transform="translate(224 62)">
-    <text x="0" y="42" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" letter-spacing="1.5" fill="#071427">ARTIBUILD</text>
-    <text x="2" y="82" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="5" fill="#b88434">PROJECT</text>
-    <path d="M3 102h395" stroke="#d4a24d" stroke-width="4" stroke-linecap="round"/>
-    <text x="2" y="134" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#26374b">Rénovation • Travaux TCE • Aménagements</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b5bd3"/><stop offset="1" stop-color="#00347c"/></linearGradient><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18d66b"/><stop offset="1" stop-color="#02964d"/></linearGradient></defs>
+<rect width="1200" height="420" fill="#fff"/>
+<g transform="translate(395 22)">
+<path d="M55 204L220 38l42 39v66l-42-40-100 101z" fill="url(#b)"/>
+<path d="M258 76h98c45 0 80 34 80 76 0 24-12 47-31 61 29 13 48 42 48 75 0 47-38 86-89 86H258V76zm66 59v58h33c18 0 31-12 31-29s-13-29-31-29h-33zm0 114v65h41c20 0 35-14 35-33 0-18-15-32-35-32h-41z" fill="url(#g)"/>
+<path d="M246 122v184h-35v-75h-32v75h-35v-116h-29v116H80v-80l120-120z" fill="#3a4043"/>
+<path d="M48 319h225" stroke="#074aa9" stroke-width="7" stroke-linecap="round"/>
+<path d="M222 16v302" stroke="#2c3338" stroke-width="5" stroke-linecap="round"/>
+</g>
+<g transform="translate(172 270)">
+<text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="900" letter-spacing="15" fill="#074aa9">ARTI</text><text x="463" y="0" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="900" letter-spacing="15" fill="#05a957">BUILD</text>
+<path d="M36 82h230" stroke="#3b3f42" stroke-width="6"/><path d="M934 82h230" stroke="#3b3f42" stroke-width="6"/><text x="330" y="98" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="500" letter-spacing="38" fill="#3b3f42">PROJECT</text>
+</g>
 </svg>
