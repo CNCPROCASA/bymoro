@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-MA">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,18 +7,24 @@
   <title>ARTIBUILD PROJECT | Rénovation maison et travaux à Casablanca</title>
   <meta name="description" content="ARTIBUILD PROJECT accompagne les particuliers à Casablanca pour rénovation maison et villa, étanchéité terrasse, plomberie, électricité, peinture, menuiserie, piscine, marbre, pierre de Tazza et aménagement extérieur, avec suivi par ingénieur génie civil.">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#031326">
   <link rel="canonical" href="https://bymoro.ma/artibuild/">
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale" content="fr_MA">
   <meta property="og:title" content="ARTIBUILD PROJECT | Rénovation et travaux à Casablanca">
-  <meta property="og:description" content="Devis clair, planning maîtrisé, suivi rigoureux et finitions soignées pour vos travaux à Casablanca.">
+  <meta property="og:description" content="Rénovez en toute confiance : devis clair, planning maîtrisé, suivi par ingénieur génie civil et finitions soignées à Casablanca.">
   <meta property="og:url" content="https://bymoro.ma/artibuild/">
   <meta property="og:image" content="https://bymoro.ma/images/artibuild/logo-artibuild-project.png">
+  <meta property="og:image:alt" content="Logo ARTIBUILD PROJECT - rénovation et travaux à Casablanca">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ARTIBUILD PROJECT | Rénovation maison et travaux à Casablanca">
-  <meta name="twitter:description" content="Rénovation maison, étanchéité, marbre, pierre, plomberie, électricité et aménagements à Casablanca.">
+  <meta name="twitter:description" content="Rénovation maison, étanchéité, marbre, pierre de Tazza, plomberie, électricité et aménagements à Casablanca.">
+  <meta name="twitter:image" content="https://bymoro.ma/images/artibuild/logo-artibuild-project.png">
+
+  <link rel="preload" as="image" href="/images/artibuild/logo-artibuild-project.png">
+  <link rel="preload" as="image" href="/images/artibuild/hero-renovation-artibuild.svg">
 
   <style>
     :root{
@@ -42,9 +48,10 @@
       font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
       background:
         radial-gradient(circle at 80% 0,rgba(23,84,137,.50),transparent 28%),
-        linear-gradient(180deg,#020b16,#061a2e 45%,#020b16);
+        linear-gradient(180deg,#020b16 0%,#061a2e 45%,#020b16 100%);
       color:var(--cream);
       line-height:1.55;
+      text-rendering:optimizeLegibility;
     }
     a{color:inherit}
     img{display:block;max-width:100%}
@@ -61,8 +68,8 @@
     .hero-card{min-height:640px;border:1px solid var(--line);border-radius:32px;overflow:hidden;background:linear-gradient(90deg,rgba(3,19,38,.98),rgba(3,19,38,.86) 55%,rgba(3,19,38,.42)),url('/images/artibuild/hero-renovation-artibuild.svg') center right/cover no-repeat;box-shadow:var(--shadow);display:grid;grid-template-columns:1.05fr .95fr;align-items:center}
     .hero-copy{padding:54px 48px;max-width:720px}
     .eyebrow{color:var(--gold2);font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px}
-    .hero h1{margin:0 0 18px;font-size:clamp(46px,7vw,86px);line-height:.9;letter-spacing:-2px;text-transform:uppercase;color:#fff}
-    .hero h1 span{display:block;color:var(--gold)}
+    h1{margin:0 0 18px;font-size:clamp(46px,7vw,86px);line-height:.9;letter-spacing:-2px;text-transform:uppercase;color:#fff}
+    h1 span{display:block;color:var(--gold)}
     .sub{font-size:clamp(21px,2.4vw,31px);font-weight:1000;color:#fff;margin:0 0 14px}
     .lead{color:var(--muted);font-size:18px;margin:0;max-width:680px}
     .chips,.actions,.tags{display:flex;gap:10px;flex-wrap:wrap}
@@ -110,6 +117,11 @@
     .cap h3{margin:0 0 4px;color:#fff;font-size:18px;line-height:1.15}
     .cap p{margin:0;color:var(--muted);font-size:13px}
 
+    .faq{display:grid;gap:14px;max-width:900px;margin:auto}
+    details{border:1px solid var(--line);border-radius:20px;padding:18px 20px;background:rgba(255,255,255,.05)}
+    summary{cursor:pointer;font-weight:1000;color:#fff;font-size:18px}
+    details p{color:var(--muted);margin:10px 0 0}
+
     .method{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:n}
     .step{text-align:center}
     .step:before{counter-increment:n;content:counter(n);width:44px;height:44px;margin:0 auto 14px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#06182c;font-weight:1000}
@@ -123,20 +135,173 @@
     .mobile-email{display:none}
 
     @media(max-width:980px){.logo{width:180px}.hero-card{grid-template-columns:1fr;min-height:auto;background:linear-gradient(180deg,rgba(3,19,38,.96),rgba(3,19,38,.80)),url('/images/artibuild/hero-renovation-artibuild.svg') center/cover no-repeat}.hero-copy{padding:42px 34px}.hero-side{padding:0 34px 34px}.grid{grid-template-columns:repeat(2,1fr)}.cred,.final{grid-template-columns:1fr}.method{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(6,1fr)}.wide,.half{grid-column:span 6}.third,.quarter{grid-column:span 3}}
-    @media(max-width:700px){.wrap{width:min(100% - 24px,1180px)}.logo{width:145px}.mail{display:none}.pill{font-size:13px;padding:9px 11px}.mobile-email{display:block;text-align:center;color:var(--gold2);font-weight:900;font-size:13px;margin-top:10px}.hero{padding-top:18px}.hero-card{border-radius:24px}.hero-copy{padding:30px 22px}.hero h1{font-size:clamp(42px,14vw,64px)}.lead{font-size:16px}.hero-side{padding:0 18px 22px}.grid,.stats,.method{grid-template-columns:1fr}.section{padding:50px 0}.head{text-align:left}.head h2{font-size:34px}.head p{font-size:16px}.btn{width:100%}.actions{width:100%}.tags{justify-content:flex-start}.gallery{grid-template-columns:1fr;gap:12px}.wide,.half,.third,.quarter{grid-column:span 1;min-height:260px}.final{padding:24px}.sticky{left:12px;right:12px;bottom:12px}.foot{padding-bottom:70px}}
+    @media(max-width:700px){.wrap{width:min(100% - 24px,1180px)}.top .wrap{min-height:70px}.logo{width:145px}.mail{display:none}.pill{font-size:13px;padding:9px 11px}.mobile-email{display:block;text-align:center;color:var(--gold2);font-weight:900;font-size:13px;margin-top:10px}.hero{padding-top:18px}.hero-card{border-radius:24px}.hero-copy{padding:30px 22px}h1{font-size:clamp(42px,14vw,64px)}.lead{font-size:16px}.hero-side{padding:0 18px 22px}.grid,.stats,.method{grid-template-columns:1fr}.section{padding:50px 0}.head{text-align:left}.head h2{font-size:34px}.head p{font-size:16px}.btn{width:100%}.actions{width:100%}.tags{justify-content:flex-start}.gallery{grid-template-columns:1fr;gap:12px}.wide,.half,.third,.quarter{grid-column:span 1;min-height:260px}.final{padding:24px}.sticky{left:12px;right:12px;bottom:12px}.foot{padding-bottom:70px}}
   </style>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"ARTIBUILD PROJECT","url":"https://bymoro.ma/artibuild/","image":"https://bymoro.ma/images/artibuild/logo-artibuild-project.png","telephone":"+212680880994","email":"artibuildproject@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Casablanca","addressCountry":"MA"},"areaServed":["Casablanca","Dar Bouazza","Bouskoura","Mohammedia","Tamaris"],"description":"Entreprise de rénovation à Casablanca avec suivi par ingénieur génie civil.","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Rénovation maison et villa à Casablanca"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Étanchéité terrasse et toiture"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Plomberie, électricité et finitions"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pose de marbre et pierre de Tazza"}}]}
+  {
+    "@context":"https://schema.org",
+    "@type":"HomeAndConstructionBusiness",
+    "name":"ARTIBUILD PROJECT",
+    "url":"https://bymoro.ma/artibuild/",
+    "image":"https://bymoro.ma/images/artibuild/logo-artibuild-project.png",
+    "telephone":"+212680880994",
+    "email":"artibuildproject@gmail.com",
+    "address":{"@type":"PostalAddress","addressLocality":"Casablanca","addressCountry":"MA"},
+    "areaServed":["Casablanca","Dar Bouazza","Bouskoura","Mohammedia","Tamaris"],
+    "description":"Entreprise de rénovation à Casablanca avec suivi par ingénieur génie civil.",
+    "makesOffer":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Rénovation maison et villa à Casablanca"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Étanchéité terrasse et toiture"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Plomberie, électricité et finitions"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Pose de marbre et pierre de Tazza"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aménagement extérieur et piscine"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"ARTIBUILD PROJECT intervient-il à Casablanca et alentours ?","acceptedAnswer":{"@type":"Answer","text":"Oui. ARTIBUILD PROJECT intervient à Casablanca et alentours, notamment Dar Bouazza, Bouskoura, Mohammedia et Tamaris selon la nature du projet."}},
+      {"@type":"Question","name":"Quels types de travaux propose ARTIBUILD PROJECT ?","acceptedAnswer":{"@type":"Answer","text":"ARTIBUILD PROJECT accompagne les particuliers pour rénovation intérieure, étanchéité terrasse, plomberie, électricité, peinture, menuiserie, piscine, marbre, pierre de Tazza et aménagement extérieur."}},
+      {"@type":"Question","name":"Les travaux sont-ils suivis par un ingénieur ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les projets sont suivis avec une approche d’ingénieur génie civil : diagnostic, devis clair, planning, coordination, contrôle qualité et réception."}}
+    ]
+  }
   </script>
 </head>
 <body>
-<header class="top"><div class="wrap"><img class="logo" src="/images/artibuild/logo-artibuild-project.png" alt="Logo ARTIBUILD PROJECT - rénovation à Casablanca" width="260" height="83"><div class="toplinks"><a class="pill mail" href="mailto:artibuildproject@gmail.com">artibuildproject@gmail.com</a><a class="pill" href="tel:+212680880994">+212 680 880 994</a></div></div></header>
+<header class="top">
+  <div class="wrap">
+    <img class="logo" src="/images/artibuild/logo-artibuild-project.png" alt="Logo ARTIBUILD PROJECT - rénovation à Casablanca" width="260" height="83">
+    <div class="toplinks">
+      <a class="pill mail" href="mailto:artibuildproject@gmail.com">artibuildproject@gmail.com</a>
+      <a class="pill" href="tel:+212680880994">+212 680 880 994</a>
+    </div>
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="wrap"><div class="hero-card"><div class="hero-copy"><div class="eyebrow">Rénovation et travaux haut de gamme à Casablanca</div><h1>Rénovez en toute <span>confiance</span></h1><p class="sub">Votre maison mérite un vrai professionnel.</p><p class="lead">Vos travaux suivis par un ingénieur génie civil. Devis clair, planning maîtrisé, suivi rigoureux et finitions soignées pour avancer sans mauvaises surprises.</p><div class="chips"><span class="chip">Ingénieur génie civil</span><span class="chip">12 ans d’expérience</span><span class="chip">Un seul interlocuteur</span></div><div class="actions"><a class="btn gold" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Diagnostic et devis gratuits</a><a class="btn wa" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">WhatsApp</a></div><div class="mobile-email">artibuildproject@gmail.com</div></div><div class="hero-side"><div class="side-card"><strong>Casablanca et alentours</strong><p>Rénovation intérieure, étanchéité, piscines, plomberie, électricité, peinture, menuiserie, marbre, pierre et aménagements.</p></div></div></div></div></section>
-<section class="section"><div class="wrap"><div class="head"><h2>Marre des mauvaises <span>expériences ?</span></h2><p>Retards, frais cachés, malfaçons, absence de suivi, finitions décevantes : ARTIBUILD PROJECT structure vos travaux pour protéger votre temps, votre budget et votre tranquillité.</p></div><div class="grid"><div class="card"><h3>Planning maîtrisé</h3><p>Priorités et délais définis avant le démarrage.</p></div><div class="card"><h3>Devis clair</h3><p>Chiffrage lisible, détaillé et cohérent avec le besoin réel.</p></div><div class="card"><h3>Contrôle qualité</h3><p>Suivi des points sensibles et vérification des finitions.</p></div><div class="card"><h3>Interlocuteur unique</h3><p>Un responsable qui centralise les échanges.</p></div><div class="card"><h3>Finitions soignées</h3><p>Le détail qui transforme une rénovation en résultat premium.</p></div><div class="card"><h3>Sérénité</h3><p>Une méthode professionnelle pour réduire le stress.</p></div></div><div class="quote"><strong>Payer le bon professionnel, c’est éviter de payer deux fois.</strong><a class="btn gold" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Évaluer mon projet</a></div></div></section>
-<section class="section"><div class="wrap cred"><div class="panel"><div class="eyebrow">Vos travaux entre de bonnes mains</div><h2>Suivis par un ingénieur génie civil</h2><p class="lead">Avec 12 ans d’expérience dans la gestion et le suivi de projets, ARTIBUILD PROJECT vous accompagne avec une approche claire, structurée et rassurante.</p></div><div class="stats"><div class="card stat"><strong>1</strong><h3>Interlocuteur unique</h3><p>Un responsable du diagnostic à la réception.</p></div><div class="card stat"><strong>12</strong><h3>Ans d’expérience</h3><p>Culture de chantier, coordination et contrôle.</p></div><div class="card stat"><strong>QC</strong><h3>Qualité contrôlée</h3><p>Finitions, détails et corrections suivis.</p></div><div class="card stat"><strong>PL</strong><h3>Planning maîtrisé</h3><p>Délais suivis et décisions tracées.</p></div></div></div></section>
-<section class="section"><div class="wrap"><div class="head"><h2>Nos domaines <span>d’expertise</span></h2><p>Travaux maison, rénovation villa, étanchéité terrasse, plomberie électricité, piscine entretien, marbre, pierre et aménagement extérieur Casablanca.</p></div><div class="grid"><div class="card"><h3>Rénovation intérieure</h3><p>Transformation des espaces avec finitions soignées.</p></div><div class="card"><h3>Étanchéité</h3><p>Protection durable des terrasses, toitures et zones humides.</p></div><div class="card"><h3>Piscines et entretien</h3><p>Entretien, rénovation et amélioration des piscines privées.</p></div><div class="card"><h3>Plomberie et électricité</h3><p>Installations propres, sûres et adaptées à votre maison.</p></div><div class="card"><h3>Marbre, pierre et finitions</h3><p>Pose, traitement et valorisation des revêtements nobles.</p></div><div class="card"><h3>Menuiserie et aménagements</h3><p>Solutions sur mesure pour optimiser et embellir vos espaces.</p></div></div></div></section>
-<section class="section" id="realisations"><div class="wrap"><div class="head"><h2>Nos <span>réalisations</span></h2><p>Une galerie organisée par type d’intervention pour montrer les étapes importantes sans brouiller la lecture.</p></div><div class="tags"><span>Terrasses & étanchéité</span><span>Chambre & marbre</span><span>Pierre de Tazza</span><span>Intérieur</span><span>Extérieur</span><span>Garage</span></div><div class="gallery"><figure class="tile wide"><img src="/images/artibuild/A12.jpg" alt="Terrasse rénovée après travaux d'étanchéité et revêtement extérieur"><figcaption class="cap"><span class="badge">Terrasse · Après</span><h3>Réfection complète d’une terrasse</h3><p>Étanchéité reprise, support traité et revêtement final.</p></figcaption></figure><figure class="tile third"><img src="/images/artibuild/A3.jpg" alt="Géotextile posé sur isolation en polystyrène extrudé XPS"><figcaption class="cap"><span class="badge">Terrasse · Technique</span><h3>Géotextile sur XPS</h3><p>Géotextile posé sur isolation en polystyrène extrudé.</p></figcaption></figure><figure class="tile third"><img src="/images/artibuild/A4.jpg" alt="Relevé d'étanchéité traité en pied de mur"><figcaption class="cap"><span class="badge">Terrasse · Détail</span><h3>Relevé d’étanchéité</h3><p>Traitement des points sensibles.</p></figcaption></figure><figure class="tile third"><img src="/images/artibuild/A7.jpg" alt="Pose de membrane d'étanchéité sur terrasse"><figcaption class="cap"><span class="badge">Terrasse · Étanchéité</span><h3>Pose de membrane</h3><p>Mise en œuvre de l’étanchéité.</p></figcaption></figure><figure class="tile half"><img src="/images/artibuild/A10.jpg" alt="Pose de marbre Crema Marfil dans une chambre"><figcaption class="cap"><span class="badge">Chambre · Marbre</span><h3>Pose du marbre Crema Marfil</h3><p>Revêtement en marbre posé dans une chambre.</p></figcaption></figure><figure class="tile half"><img src="/images/artibuild/A11.jpg" alt="Pierre de Tazza avec finition aspect vieilli"><figcaption class="cap"><span class="badge">Pierre de Tazza</span><h3>Finition aspect vieilli</h3><p>Travail de finition sur pierre de Tazza pour un rendu authentique.</p></figcaption></figure><figure class="tile half"><img src="/images/artibuild/F1.jpeg" alt="Hall d'entrée rénové avec meuble et finitions intérieures"><figcaption class="cap"><span class="badge">Intérieur</span><h3>Aménagement et finitions intérieures</h3><p>Menuiserie, habillage et mise en valeur des espaces.</p></figcaption></figure><figure class="tile quarter"><img src="/images/artibuild/F2.jpeg" alt="Store intérieur et éclairage décoratif après rénovation"><figcaption class="cap"><span class="badge">Intérieur</span><h3>Store et éclairage</h3><p>Ambiance intérieure valorisée.</p></figcaption></figure><figure class="tile quarter"><img src="/images/artibuild/F3.jpeg" alt="Placard et menuiserie intérieure sur mesure"><figcaption class="cap"><span class="badge">Menuiserie</span><h3>Placard sur mesure</h3><p>Menuiserie propre et fonctionnelle.</p></figcaption></figure><figure class="tile quarter"><img src="/images/artibuild/C1.jpg" alt="Travaux de parquet intérieur"><figcaption class="cap"><span class="badge">Parquet</span><h3>Reprise de parquet</h3><p>Intervention de finition intérieure.</p></figcaption></figure><figure class="tile half"><img src="/images/artibuild/B1.jpeg" alt="Terrasse extérieure aménagée et végétalisée"><figcaption class="cap"><span class="badge">Extérieur</span><h3>Terrasse végétalisée</h3><p>Jardinières, panneaux décoratifs et revêtement.</p></figcaption></figure><figure class="tile quarter"><img src="/images/artibuild/D1.jpeg" alt="Prise de mesures pour porte de garage"><figcaption class="cap"><span class="badge">Garage · Avant</span><h3>Prise de mesures</h3><p>Préparation de l’ouverture.</p></figcaption></figure><figure class="tile quarter"><img src="/images/artibuild/D2.jpeg" alt="Porte sectionnelle de garage installée"><figcaption class="cap"><span class="badge">Garage · Après</span><h3>Porte sectionnelle installée</h3><p>Accès sécurisé et pratique.</p></figcaption></figure></div></div></section>
-<section class="section"><div class="wrap"><div class="head"><h2>Notre méthode, <span>votre tranquillité</span></h2></div><div class="method"><div class="card step"><h3>Diagnostic sur place</h3><p>Analyse du besoin et des contraintes.</p></div><div class="card step"><h3>Devis clair</h3><p>Chiffrage transparent, sans surprise.</p></div><div class="card step"><h3>Planning maîtrisé</h3><p>Délais, séquences et priorités.</p></div><div class="card step"><h3>Travaux et suivi</h3><p>Suivi rigoureux à chaque étape.</p></div><div class="card step"><h3>Réception et finitions</h3><p>Contrôle final et résultat durable.</p></div></div><div class="final"><div><h2>Prêt à donner <span>vie à votre projet ?</span></h2><p class="lead">Confiez vos travaux à un professionnel qui les suit vraiment.</p><div class="contact"><span>Téléphone / WhatsApp : +212 680 880 994</span><span>Email : artibuildproject@gmail.com</span><span>Zone : Casablanca et alentours</span></div></div><div class="actions"><a class="btn gold" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Diagnostic gratuit</a><a class="btn wa" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Écrire sur WhatsApp</a></div></div><div class="foot">© <span id="y"></span> ARTIBUILD PROJECT — Casablanca, Maroc.</div></div></section>
-</main><div class="sticky"><a class="btn wa" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">WhatsApp</a></div><script>document.getElementById('y').textContent=new Date().getFullYear()</script></body></html>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <div class="eyebrow">Rénovation et travaux haut de gamme à Casablanca</div>
+          <h1 id="hero-title">Rénovez en toute <span>confiance</span></h1>
+          <p class="sub">Votre maison mérite un vrai professionnel.</p>
+          <p class="lead">Vos travaux suivis par un ingénieur génie civil. Devis clair, planning maîtrisé, suivi rigoureux et finitions soignées pour avancer sans mauvaises surprises.</p>
+          <div class="chips"><span class="chip">Ingénieur génie civil</span><span class="chip">12 ans d’expérience</span><span class="chip">Un seul interlocuteur</span></div>
+          <div class="actions">
+            <a class="btn gold" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Diagnostic et devis gratuits</a>
+            <a class="btn wa" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="mobile-email">artibuildproject@gmail.com</div>
+        </div>
+        <div class="hero-side"><div class="side-card"><strong>Casablanca et alentours</strong><p>Rénovation intérieure, étanchéité, piscines, plomberie, électricité, peinture, menuiserie, marbre, pierre de Tazza et aménagements extérieurs.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="problem-title">
+    <div class="wrap">
+      <div class="head"><h2 id="problem-title">Marre des mauvaises <span>expériences ?</span></h2><p>Retards, frais cachés, malfaçons, absence de suivi, finitions décevantes : ARTIBUILD PROJECT structure vos travaux pour protéger votre temps, votre budget et votre tranquillité.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Planning maîtrisé</h3><p>Priorités, séquences et délais définis avant le démarrage.</p></div>
+        <div class="card"><h3>Devis clair</h3><p>Chiffrage lisible, détaillé et cohérent avec le besoin réel.</p></div>
+        <div class="card"><h3>Contrôle qualité</h3><p>Suivi des points sensibles et vérification des finitions.</p></div>
+        <div class="card"><h3>Interlocuteur unique</h3><p>Un responsable qui centralise les échanges et les décisions.</p></div>
+        <div class="card"><h3>Finitions soignées</h3><p>Le détail qui transforme une rénovation en résultat premium.</p></div>
+        <div class="card"><h3>Sérénité</h3><p>Une méthode professionnelle pour réduire le stress et les reprises.</p></div>
+      </div>
+      <div class="quote"><strong>Payer le bon professionnel, c’est éviter de payer deux fois.</strong><a class="btn gold" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Évaluer mon projet</a></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="engineer-title">
+    <div class="wrap cred">
+      <div class="panel"><div class="eyebrow">Vos travaux entre de bonnes mains</div><h2 id="engineer-title">Suivis par un ingénieur génie civil</h2><p class="lead">Avec 12 ans d’expérience dans la gestion et le suivi de projets, ARTIBUILD PROJECT vous accompagne avec une approche claire, structurée et rassurante.</p></div>
+      <div class="stats">
+        <div class="card stat"><strong>1</strong><h3>Interlocuteur unique</h3><p>Un responsable du diagnostic à la réception.</p></div>
+        <div class="card stat"><strong>12</strong><h3>Ans d’expérience</h3><p>Culture de chantier, coordination et contrôle.</p></div>
+        <div class="card stat"><strong>QC</strong><h3>Qualité contrôlée</h3><p>Finitions, détails et corrections suivis.</p></div>
+        <div class="card stat"><strong>PL</strong><h3>Planning maîtrisé</h3><p>Délais suivis et décisions tracées.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="head"><h2 id="services-title">Nos domaines <span>d’expertise</span></h2><p>Travaux maison, rénovation villa, étanchéité terrasse, plomberie électricité, piscine entretien, marbre, pierre de Tazza et aménagement extérieur Casablanca.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Rénovation intérieure</h3><p>Transformation des espaces avec finitions soignées.</p></div>
+        <div class="card"><h3>Étanchéité terrasse et toiture</h3><p>Protection durable des terrasses, toitures et zones humides.</p></div>
+        <div class="card"><h3>Piscines et entretien</h3><p>Entretien, rénovation et amélioration des piscines privées.</p></div>
+        <div class="card"><h3>Plomberie et électricité</h3><p>Installations propres, sûres et adaptées à votre maison.</p></div>
+        <div class="card"><h3>Marbre, pierre et finitions</h3><p>Pose, traitement et valorisation des revêtements nobles.</p></div>
+        <div class="card"><h3>Menuiserie et aménagements</h3><p>Solutions sur mesure pour optimiser et embellir vos espaces.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="realisations" aria-labelledby="realisations-title">
+    <div class="wrap">
+      <div class="head"><h2 id="realisations-title">Nos <span>réalisations</span></h2><p>Une galerie organisée par type d’intervention pour montrer les étapes importantes sans brouiller la lecture.</p></div>
+      <div class="tags"><span>Terrasses & étanchéité</span><span>Chambre & marbre</span><span>Pierre de Tazza</span><span>Intérieur</span><span>Extérieur</span><span>Garage</span></div>
+      <div class="gallery">
+        <figure class="tile wide"><img src="/images/artibuild/A12.jpg" alt="Terrasse rénovée après travaux d'étanchéité et revêtement extérieur" loading="lazy"><figcaption class="cap"><span class="badge">Terrasse · Après</span><h3>Réfection complète d’une terrasse</h3><p>Étanchéité reprise, support traité et revêtement final.</p></figcaption></figure>
+        <figure class="tile third"><img src="/images/artibuild/A3.jpg" alt="Géotextile posé sur isolation en polystyrène extrudé XPS" loading="lazy"><figcaption class="cap"><span class="badge">Terrasse · Technique</span><h3>Géotextile sur XPS</h3><p>Géotextile posé sur isolation en polystyrène extrudé.</p></figcaption></figure>
+        <figure class="tile third"><img src="/images/artibuild/A4.jpg" alt="Relevé d'étanchéité traité en pied de mur" loading="lazy"><figcaption class="cap"><span class="badge">Terrasse · Détail</span><h3>Relevé d’étanchéité</h3><p>Traitement des points sensibles.</p></figcaption></figure>
+        <figure class="tile third"><img src="/images/artibuild/A7.jpg" alt="Pose de membrane d'étanchéité sur terrasse" loading="lazy"><figcaption class="cap"><span class="badge">Terrasse · Étanchéité</span><h3>Pose de membrane</h3><p>Mise en œuvre de l’étanchéité.</p></figcaption></figure>
+        <figure class="tile half"><img src="/images/artibuild/A10.jpg" alt="Pose de marbre Crema Marfil dans une chambre" loading="lazy"><figcaption class="cap"><span class="badge">Chambre · Marbre</span><h3>Pose du marbre Crema Marfil</h3><p>Revêtement en marbre posé dans une chambre.</p></figcaption></figure>
+        <figure class="tile half"><img src="/images/artibuild/A11.jpg" alt="Pierre de Tazza avec finition aspect vieilli" loading="lazy"><figcaption class="cap"><span class="badge">Pierre de Tazza</span><h3>Finition aspect vieilli</h3><p>Travail de finition sur pierre de Tazza pour un rendu authentique.</p></figcaption></figure>
+        <figure class="tile half"><img src="/images/artibuild/F1.jpeg" alt="Hall d'entrée rénové avec meuble et finitions intérieures" loading="lazy"><figcaption class="cap"><span class="badge">Intérieur</span><h3>Aménagement et finitions intérieures</h3><p>Menuiserie, habillage et mise en valeur des espaces.</p></figcaption></figure>
+        <figure class="tile quarter"><img src="/images/artibuild/F2.jpeg" alt="Store intérieur et éclairage décoratif après rénovation" loading="lazy"><figcaption class="cap"><span class="badge">Intérieur</span><h3>Store et éclairage</h3><p>Ambiance intérieure valorisée.</p></figcaption></figure>
+        <figure class="tile quarter"><img src="/images/artibuild/F3.jpeg" alt="Placard et menuiserie intérieure sur mesure" loading="lazy"><figcaption class="cap"><span class="badge">Menuiserie</span><h3>Placard sur mesure</h3><p>Menuiserie propre et fonctionnelle.</p></figcaption></figure>
+        <figure class="tile quarter"><img src="/images/artibuild/C1.jpg" alt="Travaux de parquet intérieur" loading="lazy"><figcaption class="cap"><span class="badge">Parquet</span><h3>Reprise de parquet</h3><p>Intervention de finition intérieure.</p></figcaption></figure>
+        <figure class="tile half"><img src="/images/artibuild/B1.jpeg" alt="Terrasse extérieure aménagée et végétalisée" loading="lazy"><figcaption class="cap"><span class="badge">Extérieur</span><h3>Terrasse végétalisée</h3><p>Jardinières, panneaux décoratifs et revêtement.</p></figcaption></figure>
+        <figure class="tile quarter"><img src="/images/artibuild/D1.jpeg" alt="Prise de mesures pour porte de garage" loading="lazy"><figcaption class="cap"><span class="badge">Garage · Avant</span><h3>Prise de mesures</h3><p>Préparation de l’ouverture.</p></figcaption></figure>
+        <figure class="tile quarter"><img src="/images/artibuild/D2.jpeg" alt="Porte sectionnelle de garage installée" loading="lazy"><figcaption class="cap"><span class="badge">Garage · Après</span><h3>Porte sectionnelle installée</h3><p>Accès sécurisé et pratique.</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="method-title">
+    <div class="wrap">
+      <div class="head"><h2 id="method-title">Notre méthode, <span>votre tranquillité</span></h2></div>
+      <div class="method">
+        <div class="card step"><h3>Diagnostic sur place</h3><p>Analyse du besoin et des contraintes.</p></div>
+        <div class="card step"><h3>Devis clair</h3><p>Chiffrage transparent, sans surprise.</p></div>
+        <div class="card step"><h3>Planning maîtrisé</h3><p>Délais, séquences et priorités.</p></div>
+        <div class="card step"><h3>Travaux et suivi</h3><p>Suivi rigoureux à chaque étape.</p></div>
+        <div class="card step"><h3>Réception et finitions</h3><p>Contrôle final et résultat durable.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head"><h2 id="faq-title">Questions <span>fréquentes</span></h2><p>Les points essentiels avant de lancer vos travaux de rénovation à Casablanca.</p></div>
+      <div class="faq">
+        <details><summary>Intervenez-vous à Casablanca et alentours ?</summary><p>Oui, ARTIBUILD PROJECT intervient à Casablanca et alentours selon la nature du projet : Dar Bouazza, Bouskoura, Mohammedia, Tamaris et zones proches.</p></details>
+        <details><summary>Quels travaux prenez-vous en charge ?</summary><p>Rénovation intérieure, étanchéité terrasse, plomberie, électricité, peinture, menuiserie, piscine, marbre, pierre de Tazza, aménagement extérieur et finitions.</p></details>
+        <details><summary>Comment se déroule le premier contact ?</summary><p>Vous envoyez votre besoin par WhatsApp. Un premier échange permet de comprendre le projet, puis un diagnostic et un devis clair peuvent être préparés.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="final">
+        <div><h2>Prêt à donner <span>vie à votre projet ?</span></h2><p class="lead">Confiez vos travaux à un professionnel qui les suit vraiment.</p><div class="contact"><span>Téléphone / WhatsApp : +212 680 880 994</span><span>Email : artibuildproject@gmail.com</span><span>Zone : Casablanca et alentours</span></div></div>
+        <div class="actions"><a class="btn gold" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Diagnostic gratuit</a><a class="btn wa" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">Écrire sur WhatsApp</a></div>
+      </div>
+      <div class="foot">© <span id="y"></span> ARTIBUILD PROJECT — Casablanca, Maroc.</div>
+    </div>
+  </section>
+</main>
+
+<div class="sticky"><a class="btn wa" href="https://wa.me/212680880994?text=Bonjour%2C%20je%20souhaite%20avoir%20un%20diagnostic%20et%20un%20devis%20gratuit%20pour%20des%20travaux." target="_blank" rel="noopener">WhatsApp</a></div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
