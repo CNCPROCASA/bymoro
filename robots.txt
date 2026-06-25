@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+Allow: /artibuild/
+Allow: /images/artibuild/
+Disallow: /
 
 Sitemap: https://bymoro.ma/sitemap.xml
